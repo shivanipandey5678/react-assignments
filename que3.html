@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSX and Babel</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // basic
+     let element=<p >Hlo everyone</p>
+     let root=ReactDOM.createRoot(document.getElementById("root"));
+     root.render(element);
+     //intermediate
+     let element2="Seize the day";
+     let para=<p>{element2}</p>;
+     
+     root.render(para);
+    //Advanced Level
+    let find=false;
+    if(find==true){//if boolean is true then render Seize the day
+        
+     root.render(<p>Seize the day</p>);//rendering 
+    }else{ //if boolean is false then render Make the most of it
+        root.render(<p>Make the most of it</p>);//rendering 
+    }
+
+    
+</script>
+
+
+</body>
+</html>
