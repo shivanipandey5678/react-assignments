@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Counter App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+
+   // partice1
+
+
+
+    // function App(){
+    //     const [array,setArray]=React.useState(0);
+    //     function count(){
+    //         setArray(array+1)
+    //     }
+    //     return(
+    //         <div>
+    //             <h1>coming{array}</h1>
+    //             <button onClick={count}>Increase</button>
+    //         </div>
+    //     );
+    // };
+
+
+    
+   // partice2
+
+
+   function Score(){
+    const[run,setRun]=React.useState(0);
+    const [wicket,setWicket]=React.useState(10);
+
+    function Incby4(){
+        setRun(run+4)
+
+    }
+    function Incby8(){
+        setRun(run+8)
+
+    }
+    function Incby3(){
+        setRun(run+3)
+
+    }
+    function Updatwicket(){
+        setWicket(wicket+1)
+
+    }
+    return(
+        <>
+        <p>Run:{run}</p>
+        <button onClick={Incby4}>Incby4</button>
+        <button onClick={Incby8}>Incby8</button>
+        <button onClick={Incby3}>Incby3</button>
+        <button onClick={Updatwicket}>Updatwicket</button>
+        <h1>Wicket:{wicket}</h1>
+        </>
+    )
+   }
+    let place=ReactDOM.createRoot(document.getElementById("root"));
+
+    place.render(< Score/>)
+  </script>
+</html>

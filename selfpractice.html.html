@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSX and Babel</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+//   const Message=function(prop){
+//     return <div>Happy birthday {prop.name} my age is {prop.age}</div>;
+//   };
+//   const element=(
+//     <>
+    
+//     {Message({name:"shivabni" ,age:87})}
+//     {Message({name:"vabni" ,age:7})}
+//     {Message({name:"ni" ,age:77})}
+//     <Message name="bhanu" age={8} />
+//     </>
+//   );
+   const Greeting=function(prop){
+    return (<><h1>Hello,{prop.name} age is {prop.age}</h1>
+        <p>{prop.name}</p></>);
+   };
+   const Element=()=>(
+    <>{Greeting({name:"shivani",age:67})}
+    <Greeting  name="bhanu" age={67}/>
+    </>
+   );
+  let root=ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<Element />)
+
+
+</script>
+
+
+</body>
+</html>
